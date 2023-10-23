@@ -1,0 +1,13 @@
+﻿  Space Invaders.cpp
+C:\Users\Alejandro\Desktop\Algoritmos\1111\Space Invaders\Space Invaders\FuncionesJuego.h(24,30): warning C4081: se esperaba 'newline'; se encontró ';'
+C:\Users\Alejandro\Desktop\Algoritmos\1111\Space Invaders\Space Invaders\FuncionesJuego.h(49,2): warning C4091: 'typedef ': se ha omitido a la izquierda de 'escudo' cuando no hay ninguna variable declarada
+C:\Users\Alejandro\Desktop\Algoritmos\1111\Space Invaders\Space Invaders\Juego.h(6,30): warning C4081: se esperaba 'newline'; se encontró ';'
+C:\Users\Alejandro\Desktop\Algoritmos\1111\Space Invaders\Space Invaders\Juego.h(30,25): warning C4101: 'teclado': variable local sin referencia
+C:\Users\Alejandro\Desktop\Algoritmos\1111\Space Invaders\Space Invaders\Juego.h(73,6): warning C4101: 'ultimo': variable local sin referencia
+C:\Users\Alejandro\Desktop\Algoritmos\1111\Space Invaders\Space Invaders\Juego.h(405,9): warning C4101: 'letra': variable local sin referencia
+C:\Users\Alejandro\Desktop\Algoritmos\1111\Space Invaders\Space Invaders\Space Invaders.cpp(21,30): warning C4081: se esperaba 'newline'; se encontró ';'
+  Generando código
+  Previous IPDB not found, fall back to full compilation.
+  All 28 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Generación de código finalizada
+  Space Invaders.vcxproj -> C:\Users\Alejandro\Desktop\Algoritmos\1111\Space Invaders\Release\Space Invaders.exe

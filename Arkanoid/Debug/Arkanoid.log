@@ -1,0 +1,10 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Space Invaders.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Arkanoid.cpp
+C:\Users\Alonso D\OneDrive\Documents\TEC\Semestre II\Estructuras\Arkanoid\Arkanoid\Arkanoid\FuncionesJuego.h(24,30): warning C4081: expected 'newline'; found ';'
+C:\Users\Alonso D\OneDrive\Documents\TEC\Semestre II\Estructuras\Arkanoid\Arkanoid\Arkanoid\FuncionesJuego.h(49,2): warning C4091: 'typedef ': ignored on left of 'escudo' when no variable is declared
+C:\Users\Alonso D\OneDrive\Documents\TEC\Semestre II\Estructuras\Arkanoid\Arkanoid\Arkanoid\Juego.h(6,30): warning C4081: expected 'newline'; found ';'
+C:\Users\Alonso D\OneDrive\Documents\TEC\Semestre II\Estructuras\Arkanoid\Arkanoid\Arkanoid\Juego.h(30,25): warning C4101: 'teclado': unreferenced local variable
+C:\Users\Alonso D\OneDrive\Documents\TEC\Semestre II\Estructuras\Arkanoid\Arkanoid\Arkanoid\Juego.h(73,6): warning C4101: 'ultimo': unreferenced local variable
+C:\Users\Alonso D\OneDrive\Documents\TEC\Semestre II\Estructuras\Arkanoid\Arkanoid\Arkanoid\Juego.h(405,9): warning C4101: 'letra': unreferenced local variable
+C:\Users\Alonso D\OneDrive\Documents\TEC\Semestre II\Estructuras\Arkanoid\Arkanoid\Arkanoid\Arkanoid.cpp(21,30): warning C4081: expected 'newline'; found ';'
+  Arkanoid.vcxproj -> C:\Users\Alonso D\OneDrive\Documents\TEC\Semestre II\Estructuras\Arkanoid\Arkanoid\Debug\Arkanoid.exe

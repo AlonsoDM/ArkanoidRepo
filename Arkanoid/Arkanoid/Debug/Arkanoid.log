@@ -1,0 +1,10 @@
+﻿  Arkanoid.cpp
+C:\Users\Alonso D\OneDrive\Documents\TEC\Semestre II\Estructuras\Arkanoid_ProyectoI\Arkanoid\Arkanoid\FuncionesJuego.h(24,30): warning C4081: expected 'newline'; found ';'
+C:\Users\Alonso D\OneDrive\Documents\TEC\Semestre II\Estructuras\Arkanoid_ProyectoI\Arkanoid\Arkanoid\FuncionesJuego.h(49,2): warning C4091: 'typedef ': ignored on left of 'escudo' when no variable is declared
+C:\Users\Alonso D\OneDrive\Documents\TEC\Semestre II\Estructuras\Arkanoid_ProyectoI\Arkanoid\Arkanoid\Juego.h(6,30): warning C4081: expected 'newline'; found ';'
+C:\Users\Alonso D\OneDrive\Documents\TEC\Semestre II\Estructuras\Arkanoid_ProyectoI\Arkanoid\Arkanoid\Juego.h(30,25): warning C4101: 'teclado': unreferenced local variable
+C:\Users\Alonso D\OneDrive\Documents\TEC\Semestre II\Estructuras\Arkanoid_ProyectoI\Arkanoid\Arkanoid\Juego.h(73,6): warning C4101: 'ultimo': unreferenced local variable
+C:\Users\Alonso D\OneDrive\Documents\TEC\Semestre II\Estructuras\Arkanoid_ProyectoI\Arkanoid\Arkanoid\Juego.h(405,9): warning C4101: 'letra': unreferenced local variable
+C:\Users\Alonso D\OneDrive\Documents\TEC\Semestre II\Estructuras\Arkanoid_ProyectoI\Arkanoid\Arkanoid\Arkanoid.cpp(21,30): warning C4081: expected 'newline'; found ';'
+  LINK : C:\Users\Alonso D\OneDrive\Documents\TEC\Semestre II\Estructuras\Arkanoid_ProyectoI\Arkanoid\Debug\Arkanoid.exe not found or not built by the last incremental link; performing full link
+  Arkanoid.vcxproj -> C:\Users\Alonso D\OneDrive\Documents\TEC\Semestre II\Estructuras\Arkanoid_ProyectoI\Arkanoid\Debug\Arkanoid.exe

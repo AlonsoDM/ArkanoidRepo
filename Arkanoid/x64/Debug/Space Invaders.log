@@ -1,0 +1,57 @@
+﻿  Space Invaders.cpp
+C:\Users\Alejandro\Desktop\Algoritmos\1111\Space Invaders\Space Invaders\FuncionesJuego.h(24,30): warning C4081: se esperaba 'newline'; se encontró ';'
+C:\Users\Alejandro\Desktop\Algoritmos\1111\Space Invaders\Space Invaders\FuncionesJuego.h(49,2): warning C4091: 'typedef ': se ha omitido a la izquierda de 'escudo' cuando no hay ninguna variable declarada
+C:\Users\Alejandro\Desktop\Algoritmos\1111\Space Invaders\Space Invaders\Juego.h(6,30): warning C4081: se esperaba 'newline'; se encontró ';'
+C:\Users\Alejandro\Desktop\Algoritmos\1111\Space Invaders\Space Invaders\Juego.h(30,25): warning C4101: 'teclado': variable local sin referencia
+C:\Users\Alejandro\Desktop\Algoritmos\1111\Space Invaders\Space Invaders\Juego.h(73,6): warning C4101: 'ultimo': variable local sin referencia
+C:\Users\Alejandro\Desktop\Algoritmos\1111\Space Invaders\Space Invaders\Juego.h(405,9): warning C4101: 'letra': variable local sin referencia
+C:\Users\Alejandro\Desktop\Algoritmos\1111\Space Invaders\Space Invaders\Space Invaders.cpp(21,30): warning C4081: se esperaba 'newline'; se encontró ';'
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_rest sin resolver al que se hace referencia en la función "int __cdecl juego(int,int,bool)" (?juego@@YAHHH_N@Z)
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_map_rgb sin resolver al que se hace referencia en la función "void __cdecl CargarArchivo(int,int,struct ALLEGRO_FONT *,int)" (?CargarArchivo@@YAXHHPEAUALLEGRO_FONT@@H@Z)
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_destroy_bitmap sin resolver al que se hace referencia en la función "int __cdecl juego(int,int,bool)" (?juego@@YAHHH_N@Z)
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_draw_bitmap sin resolver al que se hace referencia en la función "int __cdecl juego(int,int,bool)" (?juego@@YAHHH_N@Z)
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_draw_bitmap_region sin resolver al que se hace referencia en la función "void __cdecl dibujarEscudos(struct escudo * const,struct ALLEGRO_BITMAP *)" (?dibujarEscudos@@YAXQEAUescudo@@PEAUALLEGRO_BITMAP@@@Z)
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_draw_scaled_bitmap sin resolver al que se hace referencia en la función "int __cdecl juego(int,int,bool)" (?juego@@YAHHH_N@Z)
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_draw_tinted_bitmap sin resolver al que se hace referencia en la función main
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_load_bitmap sin resolver al que se hace referencia en la función "int __cdecl juego(int,int,bool)" (?juego@@YAHHH_N@Z)
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_create_event_queue sin resolver al que se hace referencia en la función "int __cdecl juego(int,int,bool)" (?juego@@YAHHH_N@Z)
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_destroy_event_queue sin resolver al que se hace referencia en la función "int __cdecl juego(int,int,bool)" (?juego@@YAHHH_N@Z)
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_register_event_source sin resolver al que se hace referencia en la función "int __cdecl juego(int,int,bool)" (?juego@@YAHHH_N@Z)
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_wait_for_event sin resolver al que se hace referencia en la función "int __cdecl juego(int,int,bool)" (?juego@@YAHHH_N@Z)
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_set_new_display_flags sin resolver al que se hace referencia en la función "int __cdecl juego(int,int,bool)" (?juego@@YAHHH_N@Z)
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_get_display_width sin resolver al que se hace referencia en la función main
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_get_display_height sin resolver al que se hace referencia en la función main
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_create_display sin resolver al que se hace referencia en la función "int __cdecl juego(int,int,bool)" (?juego@@YAHHH_N@Z)
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_destroy_display sin resolver al que se hace referencia en la función "int __cdecl juego(int,int,bool)" (?juego@@YAHHH_N@Z)
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_flip_display sin resolver al que se hace referencia en la función "int __cdecl juego(int,int,bool)" (?juego@@YAHHH_N@Z)
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_get_display_event_source sin resolver al que se hace referencia en la función main
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_set_window_title sin resolver al que se hace referencia en la función "int __cdecl juego(int,int,bool)" (?juego@@YAHHH_N@Z)
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_clear_to_color sin resolver al que se hace referencia en la función "int __cdecl juego(int,int,bool)" (?juego@@YAHHH_N@Z)
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_install_keyboard sin resolver al que se hace referencia en la función main
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_get_keyboard_event_source sin resolver al que se hace referencia en la función "int __cdecl juego(int,int,bool)" (?juego@@YAHHH_N@Z)
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_get_monitor_info sin resolver al que se hace referencia en la función "int __cdecl juego(int,int,bool)" (?juego@@YAHHH_N@Z)
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_install_mouse sin resolver al que se hace referencia en la función main
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_uninstall_mouse sin resolver al que se hace referencia en la función "int __cdecl juego(int,int,bool)" (?juego@@YAHHH_N@Z)
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_get_mouse_event_source sin resolver al que se hace referencia en la función main
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_install_system sin resolver al que se hace referencia en la función main
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_create_timer sin resolver al que se hace referencia en la función "int __cdecl juego(int,int,bool)" (?juego@@YAHHH_N@Z)
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_destroy_timer sin resolver al que se hace referencia en la función "int __cdecl juego(int,int,bool)" (?juego@@YAHHH_N@Z)
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_start_timer sin resolver al que se hace referencia en la función "int __cdecl juego(int,int,bool)" (?juego@@YAHHH_N@Z)
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_get_timer_event_source sin resolver al que se hace referencia en la función "int __cdecl juego(int,int,bool)" (?juego@@YAHHH_N@Z)
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_load_font sin resolver al que se hace referencia en la función "int __cdecl juego(int,int,bool)" (?juego@@YAHHH_N@Z)
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_draw_text sin resolver al que se hace referencia en la función "void __cdecl CargarArchivo(int,int,struct ALLEGRO_FONT *,int)" (?CargarArchivo@@YAXHHPEAUALLEGRO_FONT@@H@Z)
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_destroy_font sin resolver al que se hace referencia en la función "int __cdecl juego(int,int,bool)" (?juego@@YAHHH_N@Z)
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_init_font_addon sin resolver al que se hace referencia en la función main
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_init_ttf_addon sin resolver al que se hace referencia en la función main
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_show_native_message_box sin resolver al que se hace referencia en la función "int __cdecl juego(int,int,bool)" (?juego@@YAHHH_N@Z)
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_init_primitives_addon sin resolver al que se hace referencia en la función main
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_draw_filled_rectangle sin resolver al que se hace referencia en la función "int __cdecl juego(int,int,bool)" (?juego@@YAHHH_N@Z)
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_init_image_addon sin resolver al que se hace referencia en la función main
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_destroy_sample sin resolver al que se hace referencia en la función "int __cdecl juego(int,int,bool)" (?juego@@YAHHH_N@Z)
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_install_audio sin resolver al que se hace referencia en la función main
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_reserve_samples sin resolver al que se hace referencia en la función main
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_play_sample sin resolver al que se hace referencia en la función "void __cdecl disparoEnemigo(struct nave * &,struct bala &,int,struct nave &,int * const,struct ALLEGRO_SAMPLE *)" (?disparoEnemigo@@YAXAEAPEAUnave@@AEAUbala@@HAEAU1@QEAHPEAUALLEGRO_SAMPLE@@@Z)
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_load_sample sin resolver al que se hace referencia en la función "int __cdecl juego(int,int,bool)" (?juego@@YAHHH_N@Z)
+Space Invaders.obj : error LNK2019: símbolo externo __imp_al_init_acodec_addon sin resolver al que se hace referencia en la función main
+c:\allegro\lib\allegro-5.0.10-monolith-md.lib : warning LNK4272: el tipo de máquina de biblioteca 'x86' está en conflicto con el tipo de máquina de destino 'x64'
+C:\Users\Alejandro\Desktop\Algoritmos\1111\Space Invaders\x64\Debug\Space Invaders.exe : fatal error LNK1120: 47 externos sin resolver

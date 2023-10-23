@@ -1,0 +1,20 @@
+Nombre:?
+Puntaje: 60
+
+
+Nombre:?
+Puntaje: 60
+
+
+Nombre:?
+Puntaje: 0
+
+
+Nombre:?
+Puntaje: 0
+
+
+Nombre:?
+Puntaje: 0
+
+
