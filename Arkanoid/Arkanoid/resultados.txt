@@ -18,3 +18,7 @@ Nombre:?
 Puntaje: 0
 
 
+Nombre:?
+Puntaje: 0
+
+

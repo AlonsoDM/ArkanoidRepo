@@ -54,7 +54,7 @@ int main() {
 
 	ALLEGRO_DISPLAY* pantalla = al_create_display(RX, RY);
 
-	al_set_window_title(pantalla, "Space Invaders");//Se le pone un título a la ventana
+	al_set_window_title(pantalla, "Arkanoid");//Se le pone un título a la ventana
 	if (!pantalla)
 	{
 		//Si el display no se ejecuta se lanza el mensaje de error
@@ -111,12 +111,10 @@ int main() {
 		ALLEGRO_EVENT eventos;
 		al_wait_for_event(cola_eventos, &eventos);
 
-		if (eventos.type == ALLEGRO_EVENT_MOUSE_AXES)
-		{
+		if (eventos.type == ALLEGRO_EVENT_MOUSE_AXES) {
 			//Se registra la posición en x y y del mouse
 			mousex = eventos.mouse.x;
 			mousey = eventos.mouse.y;
-
 		}
 		if (eventos.type == ALLEGRO_EVENT_TIMER)
 		{
@@ -131,7 +129,7 @@ int main() {
 				//Se dibuja el fondo animado y las opciones del menú en el display
 				al_clear_to_color(al_map_rgb(0, 0, 0));
 				al_draw_scaled_bitmap(Fondo, 0, frameactual * alturaDeFrame, AnchoDeFrame, alturaDeFrame, 0, 0, RX, RY, 0);
-				al_draw_text(fuente1, al_map_rgb(250, 250, 15), X / 2, (RY * (150.0 / 768.0)), ALLEGRO_ALIGN_CENTRE, "SPACE INVADERS");
+				al_draw_text(fuente1, al_map_rgb(250, 250, 15), X / 2, (RY * (150.0 / 768.0)), ALLEGRO_ALIGN_CENTRE, "Arkanoid");
 				al_draw_text(fuente2, al_map_rgb(250, 250, 250), X / 2, (RY * (250.0 / 768.0)), ALLEGRO_ALIGN_CENTRE, "JUGAR");
 				al_draw_text(fuente2, al_map_rgb(250, 250, 250), X / 2, (RY * (320.0 / 768.0)), ALLEGRO_ALIGN_CENTRE, "DEMO");
 				al_draw_text(fuente2, al_map_rgb(250, 250, 250), X / 2, (RY * (390.0 / 768.0)), ALLEGRO_ALIGN_CENTRE, "RESULTADOS");
@@ -200,7 +198,7 @@ int main() {
 								//Se dibuja el fondo animado otra vez y se lanzan los resultado y felchas para navegar los resultados así como la tecla atrás para volver al menú principal
 								al_clear_to_color(al_map_rgb(0, 0, 0));
 								al_draw_scaled_bitmap(Fondo, 0, frameactual * alturaDeFrame, AnchoDeFrame, alturaDeFrame, 0, 0, RX, RY, 0);
-								al_draw_text(fuente1, al_map_rgb(250, 250, 15), X / 2, (RY * (150.0 / 768.0)), ALLEGRO_ALIGN_CENTRE, "SPACE INVADERS");
+								al_draw_text(fuente1, al_map_rgb(250, 250, 15), X / 2, (RY * (150.0 / 768.0)), ALLEGRO_ALIGN_CENTRE, "Arkanoid");
 								al_draw_text(fuente2, al_map_rgb(250, 250, 250), X / 2, (RY * (250.0 / 768.0)), ALLEGRO_ALIGN_CENTRE, "RESULTADOS");
 								al_draw_bitmap(Flecha, X / 2 - 200, (RY * (300.0 / 768.0)), NULL);
 								al_draw_bitmap(Flecha, X / 2 - 200, (RY * (500 / 768.0)), ALLEGRO_FLIP_VERTICAL);
@@ -219,9 +217,9 @@ int main() {
 							if (eventos.type == ALLEGRO_EVENT_MOUSE_BUTTON_UP)
 							{
 								if (eventos.mouse.button & 1) {
-									if (inicio >= 1) {
+									if (inicio >= 1)
 										inicio = inicio - 1;
-									}
+
 								}
 							}
 						}
@@ -268,7 +266,7 @@ int main() {
 								//Se dibujan todos los bitmaps, las instrucciones y títulos
 								al_clear_to_color(al_map_rgb(0, 0, 0));
 								al_draw_scaled_bitmap(Fondo, 0, frameactual * alturaDeFrame, AnchoDeFrame, alturaDeFrame, 0, 0, RX, RY, 0);
-								al_draw_text(fuente1, al_map_rgb(250, 250, 15), X / 2, (RY * (150.0 / 768.0)), ALLEGRO_ALIGN_CENTRE, "SPACE INVADERS");
+								al_draw_text(fuente1, al_map_rgb(250, 250, 15), X / 2, (RY * (150.0 / 768.0)), ALLEGRO_ALIGN_CENTRE, "Arkanoid");
 								al_draw_text(fuente2, al_map_rgb(250, 250, 250), X / 2, (RY * (250.0 / 768.0)), ALLEGRO_ALIGN_CENTRE, "INSTRUCCIONES");
 								al_draw_bitmap(Instrucc, X / 2 - 200, (RY * (350.0 / 768.0)), NULL);
 								al_draw_text(fuente2, al_map_rgb(250, 250, 250), X / 2, (RY * (510.0 / 768.0)), ALLEGRO_ALIGN_CENTRE, "Atras");

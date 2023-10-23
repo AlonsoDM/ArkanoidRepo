@@ -26,6 +26,11 @@ using namespace std;
 const int ResX = 700;
 const int ResY = 800;
 const int diametro = 32;
+const int radioBola = 5;
+
+const int anchoVaus = 60;
+const int alturaVaus = 20;
+
 //Se define la estructura nave que controlará tanto las naves enemigas como la aliada, esta tendrá un codigo(para enemigos), posiciones en x y y, estado(vivo o muerto) y un puntero a nave para crear la lista enlazada(enemigos)
 typedef struct nave {
 	int codigo;
@@ -56,6 +61,32 @@ typedef struct bala {
 	bala* Siguiente;
 }*PtrBala;
 
+typedef struct ball {
+	int y;
+	int x;
+	int velY;
+	int velX;
+	bool estado;
+};
+
+
+void inicializarVaus(nave& jugador, int x) {
+	//Se crea la función inicializar jugador que ingresará os valores para cada estructura insertada, en este caso la nave jugador que se inicia a la mitad de la pantalla y en una posición fija en Y 
+	jugador.x = x / 2;
+	jugador.y = ResY - 100;
+	jugador.codigo = 3;
+	jugador.estado = true;
+	jugador.Siguiente = NULL;
+}
+
+void inicializarBall(ball& bola, int x, int y) {
+	//Se crea la función inicializar jugador que ingresará os valores para cada estructura insertada, en este caso la nave jugador que se inicia a la mitad de la pantalla y en una posición fija en Y 
+	bola.x = x / 2;
+	bola.y = y / 2;
+	bola.velX = 9;
+	bola.velY = -5;
+	bola.estado = true;
+}
 
 void inicializarJugador(nave& jugador, int x) {
 	//Se crea la función inicializar jugador que ingresará os valores para cada estructura insertada, en este caso la nave jugador que se inicia a la mitad de la pantalla y en una posición fija en Y 
@@ -161,6 +192,22 @@ void moverEnemigos(PtrNave& enemigos, int total, int x) {
 		}
 		Aux->x = Aux->x + Aux->velocidad;
 		Aux = Aux->Siguiente;
+	}
+}
+
+void moverBola(ball& bola, nave vaus, int x, int y) {
+	bola.x += bola.velX;
+	bola.y += bola.velY;
+	if (bola.x - radioBola < 540 || bola.x + radioBola > x - 540) {
+		bola.velX = -bola.velX;
+	}
+	if (bola.y - radioBola < 50) {
+		bola.velY = -bola.velY;
+	}
+	if (bola.y - radioBola >= vaus.y - alturaVaus && bola.y - radioBola <= vaus.y + alturaVaus) {
+		if (bola.x - radioBola >= vaus.x - anchoVaus && bola.x - radioBola <= vaus.x + anchoVaus) {
+			bola.velY = -bola.velY;
+		}
 	}
 }
 

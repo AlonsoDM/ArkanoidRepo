@@ -6,8 +6,7 @@ using namespace std;
 #pragma warning(disable:4996);
 #define FPS 60.0
 
-int juego(int nivel, int vida, bool modo)
-{
+int juego(int nivel, int vida, bool modo) {
 	al_uninstall_mouse();
 	ALLEGRO_MONITOR_INFO monitor;
 	al_get_monitor_info(0, &monitor);
@@ -19,8 +18,7 @@ int juego(int nivel, int vida, bool modo)
 	//al_set_window_position(pantalla, 0, 0);
 	al_set_window_title(pantalla, "Space Invaders");
 
-	if (!pantalla)
-	{
+	if (!pantalla) {
 		al_show_native_message_box(NULL, "Ventana Emergente", "Error", "No se puede crear la pantalla", NULL, ALLEGRO_MESSAGEBOX_ERROR);
 		return 0;
 	}
@@ -35,7 +33,8 @@ int juego(int nivel, int vida, bool modo)
 
 	ALLEGRO_EVENT_QUEUE* cola_eventos = al_create_event_queue();
 	ALLEGRO_BITMAP* naveE[7];
-	naveE[0] = al_load_bitmap("Imagenes/TIE1.png");
+
+	naveE[0] = al_load_bitmap("Imagenes/bloqueBlanco.png");
 	naveE[1] = al_load_bitmap("Imagenes/EXP1.png");
 	naveE[2] = al_load_bitmap("Imagenes/EXP2.png");
 	naveE[3] = al_load_bitmap("Imagenes/EXP3.png");
@@ -43,9 +42,10 @@ int juego(int nivel, int vida, bool modo)
 	naveE[5] = al_load_bitmap("Imagenes/EXP5.png");
 	naveE[6] = al_load_bitmap("Imagenes/EXP6.png");
 
+	ALLEGRO_BITMAP* Ball = al_load_bitmap("Imagenes/5.png");
 
-	ALLEGRO_BITMAP* naveJ0 = al_load_bitmap("Imagenes/XWING0.png");
-	ALLEGRO_BITMAP* naveJ1 = al_load_bitmap("Imagenes/XWING1.png");
+	ALLEGRO_BITMAP* naveJ0 = al_load_bitmap("Imagenes/132.png");
+	ALLEGRO_BITMAP* naveJ1 = al_load_bitmap("Imagenes/133.png");
 	ALLEGRO_BITMAP* BalaE = al_load_bitmap("Imagenes/BALAE.png");
 	ALLEGRO_BITMAP* BalaA = al_load_bitmap("Imagenes/BALAA.png");
 	ALLEGRO_BITMAP* Fondo = al_load_bitmap("Imagenes/Fondo.png");
@@ -100,15 +100,17 @@ int juego(int nivel, int vida, bool modo)
 	PtrNave Enemigos = NULL;
 	escudo ESCUDOS[30];
 
+	ball bola;
 
 	//Se inicializa los enemigos
 	inicializarEnemigos(Enemigos, RX);
 	//Se inicializa el jugador
-	inicializarJugador(jugador, RX);
+	inicializarVaus(jugador, RX);
 	jugador.codigo = vida;
 	//Se inicializa los escudos
-	crearEscudo(ESCUDOS, RX, RY);
-
+	//crearEscudo(ESCUDOS, RX, RY);
+	//Se inicializa la bola
+	inicializarBall(bola, RX, RY);
 
 	al_clear_to_color(al_map_rgb(0, 0, 0));
 	al_flip_display();
@@ -181,7 +183,7 @@ int juego(int nivel, int vida, bool modo)
 					break;
 				}
 			}
-			//Para las teclas que  o estan pulsadas (Las flechas) se asigna a la direccion un valor que no coincida con Derecha o Izquierda
+			//Para las teclas que no estan pulsadas (Las flechas) se asigna a la direccion un valor que no coincida con Derecha o Izquierda
 			if (eventos.type == ALLEGRO_EVENT_KEY_UP)
 			{
 				switch (eventos.keyboard.keycode) {
@@ -198,7 +200,8 @@ int juego(int nivel, int vida, bool modo)
 		if (eventos.type == ALLEGRO_EVENT_TIMER) {
 			//Eventos de timerD
 			if (eventos.timer.source == timerD) {
-				moverEnemigos(Enemigos, numEnemigos, RX);
+				//moverEnemigos(Enemigos, numEnemigos, RX);
+				moverBola(bola, jugador, RX, RY);
 			}
 			//Eventos de timer
 			if (eventos.timer.source == timer) {
@@ -223,8 +226,6 @@ int juego(int nivel, int vida, bool modo)
 					movF = 0;
 				}
 				movF++;
-
-
 				//Se recorre la lista de naves y se muestra en pantalla las que esten activas
 				PtrNave	Aux = NULL;
 				Aux = Enemigos;
@@ -247,7 +248,8 @@ int juego(int nivel, int vida, bool modo)
 				//Si cool es menor a 100, si por medio de modulos se muestra o no la nave en pantalla creando un parpadeo de la nave
 				else {
 					if (cool % 8 == 0 || cool % 8 == 7 || cool % 8 == 6 || cool % 8 == 5)
-						al_draw_bitmap(naveJ0, jugador.x - 32, jugador.y - 32, NULL);
+						al_draw_bitmap(Ball, bola.x - 32, bola.y - 32, NULL);
+					al_draw_bitmap(naveJ0, jugador.x - 32, jugador.y - 32, NULL);
 				}
 				//Si la cantidad de naves activas actualizada es diferente a la cantudad de naves activas anterior se actualiza al contador de naves
 				//Si la cantidad de naves activas es cero, termina el juego y declara salida como la cantidad de vidas del jugador
@@ -262,7 +264,6 @@ int juego(int nivel, int vida, bool modo)
 					}
 					//al_set_timer_speed(timerD, 1.0 / rapidez);
 				}
-
 				//******************Escudos******************
 				//Se llama da dibujarEscudos, colisionEscudos y colisionEscudosBala
 				dibujarEscudos(ESCUDOS, ESCUDO);
@@ -278,8 +279,8 @@ int juego(int nivel, int vida, bool modo)
 
 				//******************Disparo Enemigo******************
 				//Se llama a disparoEnemigo que escoge aleatoriamente una nave que dispare, a pintarBala que muestra la bala enemiga disparada y a colsion entre el jugador y la bala disparada
-				disparoEnemigo(Enemigos, BalaEnemigo, -5, jugador, listaNaves, TIES);
-				pintarBala(BalaEnemigo, BalaE);
+				//disparoEnemigo(Enemigos, BalaEnemigo, -5, jugador, listaNaves, TIES);
+				//pintarBala(BalaEnemigo, BalaE);
 				colision(jugador, BalaEnemigo);
 
 				//Si el codigo de la nave destruida es distinto a 56 (Si es 56 no se destruyo ninguna nave) se reproduce el sonido de explosion y se asingna a bajax y bajay las coordenadas de la nave donde exploto
@@ -376,6 +377,7 @@ int juego(int nivel, int vida, bool modo)
 				//Si el jugador esta activo se muestra en pantalla
 				if (jugador.estado == true) {
 					al_draw_bitmap(naveJ0, jugador.x - 32, jugador.y - 32, NULL);
+					al_draw_bitmap(Ball, bola.x - 32, bola.y - 32, NULL);
 				}
 				//Si el jugador esta inactivo se aumenta en uno el contador cool
 				else {
@@ -390,8 +392,6 @@ int juego(int nivel, int vida, bool modo)
 			}
 		}
 		al_flip_display();
-
-
 	}
 	//Si la salida es igual a cero (El jugador perdio la partida)
 	if (salida == 0) {
@@ -490,6 +490,7 @@ int juego(int nivel, int vida, bool modo)
 
 		}
 	}
+
 	//Se destruyen las variables incializadas de Allgero
 	al_destroy_sample(musica);
 
